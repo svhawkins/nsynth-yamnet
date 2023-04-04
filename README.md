@@ -53,7 +53,7 @@ Running all of the code in the livescript may take a considerable amount of time
 to preprocessing, training, and evaluating the same network up to 14 times. 
 To limit the number of loop iterations, breakpoints can be set at the 1st statement inside the body of the for loop on line 36.
 
-Or to to limit the range of `current_label`. It can range from a value of 1 to 14.
+Or limit the range of `current_label`. It can range from a value of 1 to 14.
 The range can be changed on line 33:
 
 `for current_label = 1:numel(labels) % numel(labels) is 14` to `for current_label = new_range_start:new_range_end`
