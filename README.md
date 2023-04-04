@@ -52,7 +52,7 @@ The range can be changed on line 33:
 
 The labels are as follows:
 
->1. pitch (128 classes)
+>1. pitch (106 classes)
 >
 >2. instrument_source_str (3 classes)
 >
