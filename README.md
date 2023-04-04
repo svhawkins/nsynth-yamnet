@@ -3,9 +3,17 @@ Using MATLAB for transfer learning with pretrained YAMNet using the NSynth datas
 
 Also generates supplementary figures while preprocessing, training, and evaluating:
 1. histograms for every label
-2. 10 mel spectrogram images for each dataset partition for each label iterated
+2. 5 mel spectrogram images for each dataset partition for each label iterated
 3. confusion matrices for every label
 4. There is also a new window opened for each training progress on the network(s), which can be used to manually save accuracy and loss figures during training.
+
+To NOT have these figures generated, do the following before running:
+1. To not generate histograms, comment out lines 6-22 (or just don't run that cell at all)
+2. To not generate spectrograms, comment out lines 104, 106, 107, and lines 115-121 in `function [features, labels] = featureLabelExtract(adsSubset)`
+3. To not generate confusion matrices, commment out lines 74 and 75.
+4. To not show training progress
+   1. In `trainingOptions` set the `"Plots"` parameter to `"None"` (from `"training-progress"`) on line 64. This prohibits a new training progress window.
+   2. In `traningOptions` verbose training output (text based) can be disabled by setting `"Verbose"` to `false` (from `true`) on line 58.
 
 # Licensing
 The dataset is made available by Google Inc. under a Creative Commons Attribution 4.0 International (CC BY 4.0)
@@ -43,10 +51,10 @@ Once downloaded, it ***must*** be in the same directory as this live script!
 ## Disclaimer
 Running all of the code in the livescript may take a considerable amount of time, memory space (and the possibility of your computer to sound like a helicopter) due
 to preprocessing, training, and evaluating the same network up to 14 times. 
-To limit the number of loop iterations, breakpoints can be set at the 1st statement inside the body of the for loop at line 36.
+To limit the number of loop iterations, breakpoints can be set at the 1st statement inside the body of the for loop on line 36.
 
 Or to to limit the range of `current_label`. It can range from a value of 1 to 14.
-The range can be changed in line 33:
+The range can be changed on line 33:
 
 `for current_label = 1:numel(labels) % numel(labels) is 14` to `for current_label = new_range_start:new_range_end`
 
