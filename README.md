@@ -9,6 +9,7 @@ Also generates supplementary figures while preprocessing, training, and evaluati
 
 # Licensing
 The dataset is made available by Google Inc. under a Creative Commons Attribution 4.0 International (CC BY 4.0)
+
 [License](https://creativecommons.org/licenses/by/4.0/)
 
 [License text](https://creativecommons.org/licenses/by/4.0/legalcode)
