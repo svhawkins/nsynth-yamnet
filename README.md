@@ -14,7 +14,7 @@ The dataset is made available by Google Inc. under a Creative Commons Attributio
 
 [License text](https://creativecommons.org/licenses/by/4.0/legalcode)
 
-The source code (my source) is licensed under the MIT License, in LICENSE.md
+The source code (my source code) is licensed under the MIT License, in LICENSE.md
 
 # Running the code:
 ## Dependencies:
@@ -37,8 +37,8 @@ Seeing the dependencies can be down by running the following code in the MATLAB 
 >> squeeze(struct2table(pList))
 ```
 
-This MATLAB live script also requires the NSynth musical note dataset, specifically the `json/wav` format of the test data, which can be found [here](https://magenta.tensorflow.org/datasets/nsynth#files)
-Once downloaded, it ***must** be in the same directory as this live script!
+This MATLAB live script also requires the NSynth musical note dataset, specifically the `json/wav` format of the test data, which can be found [here](https://magenta.tensorflow.org/datasets/nsynth#files).
+Once downloaded, it ***must*** be in the same directory as this live script!
 
 ## Disclaimer
 Running all of the code in the livescript may take a considerable amount of time, memory space (and the possibility of your computer to sound like a helicopter) due
