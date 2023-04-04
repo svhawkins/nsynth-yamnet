@@ -82,7 +82,7 @@ The labels are as follows:
 
 Labels 5-14 are boolean classifiers.
 
-# Modifications to script:
+# Script Modifications
 
 To NOT have figures generated, do any of the the following before running:
 1. To not generate histograms, comment out lines 6-22 (or just don't run that cell at all)
