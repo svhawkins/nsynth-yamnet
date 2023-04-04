@@ -123,7 +123,7 @@ function [features, labels] = featureLabelExtract(adsSubset)
       features = cat(4, features, feat);
       labels = cat(2, labels, repelem(fileInfo.Label, 1, nSpectrums));
 
-      %% random spectrograms
+      % random spectrograms
       if (ismember(i, nums))
           imagesc(feat(:, :, randi(size(feat, 4))));
           xlabel("Mel band"); ylabel("Frame");
