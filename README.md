@@ -7,14 +7,6 @@ Also generates supplementary figures while preprocessing, training, and evaluati
 3. confusion matrices for every label
 4. There is also a new window opened for each training progress on the network(s), which can be used to manually save accuracy and loss figures during training.
 
-To NOT have these figures generated, do the following before running:
-1. To not generate histograms, comment out lines 6-22 (or just don't run that cell at all)
-2. To not generate spectrograms, comment out lines 104, 106, 107, and lines 115-121 in `function [features, labels] = featureLabelExtract(adsSubset)`
-3. To not generate confusion matrices, commment out lines 74 and 75.
-4. To not show training progress
-   1. In `trainingOptions` set the `"Plots"` parameter to `"None"` (from `"training-progress"`) on line 64. This prohibits a new training progress window.
-   2. In `traningOptions` verbose training output (text based) can be disabled by setting `"Verbose"` to `false` (from `true`) on line 58.
-
 # Licensing
 The dataset is made available by Google Inc. under a Creative Commons Attribution 4.0 International (CC BY 4.0)
 
@@ -90,3 +82,17 @@ The labels are as follows:
 
 Labels 5-14 are boolean classifiers.
 
+# Modifications to script:
+
+To NOT have figures generated, do any of the the following before running:
+1. To not generate histograms, comment out lines 6-22 (or just don't run that cell at all)
+2. To not generate spectrograms, comment out lines 105-109 and lines 118-124 in `function [features, labels] = featureLabelExtract(adsSubset)`
+3. To not generate confusion matrices, commment out lines 74 and 75.
+4. To not show training progress
+   1. In `trainingOptions` set the `"Plots"` parameter to `"None"` (from `"training-progress"`) on line 64. This prohibits a new training progress window.
+   2. In `traningOptions` verbose training output (text based) can be disabled by setting `"Verbose"` to `false` (from `true`) on line 58.
+
+
+Updating training options:
+1. If you don't have a GPU (or even a good one), the `"ExecutionEnvironment"` parameter can be changed to `"cpu"` from `"gpu"` on line 65.
+2. `"MaxEpochs"`, `"MiniBatchSize"`, and `"InitialLearnRate"` can be modified at lines 59, 60, and 63 respectively.
