@@ -31,7 +31,7 @@ This MATLAB live script requires the following toolboxes:
 ```
 
 
-Seeing the dependencies can be down by running the following code in the MATLAB command window:
+Seeing the dependencies can be done by running the following code in the MATLAB command line window:
 ```
 >> [~,pList] = matlab.codetools.requiredFilesAndProducts('yamnet_nsynth.mlx');
 >> squeeze(struct2table(pList))
